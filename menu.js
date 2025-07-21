@@ -1,5 +1,5 @@
-import { addFromMenu } from "simulate";
-import { WIDTH, HEIGHT } from "settings";
+import { addFromMenu } from "./simulate";
+import { WIDTH, HEIGHT } from "./settings";
 
 let canvas       = null;
 let previewImg   = null;
