@@ -1,4 +1,4 @@
-import { engine } from "./simulate";
+import { engine } from "./simulate.js";
 
 const mql = window.matchMedia("(orientation: portrait)");
 
