@@ -1,4 +1,4 @@
-import { Bodies, Composite} from "/node_modules/matter-js/build/matter.js";
+import { Bodies, Composite} from "matter.js";
 import { objects, engine } from "simulate.js";
 
 export function addRect(x, y, width, height, density, frictionAir, friction, frictionStatic, restitution) {
