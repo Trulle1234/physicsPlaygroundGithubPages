@@ -71,3 +71,14 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 
 Have fun exploring physics in your browser!  
 Feel free to open an issue or reach out at `trulle.123.contact@gmail.com` with questions or ideas.```
+
+<br>
+<br>
+
+<div align="left">
+  <a href="https://shipwrecked.hackclub.com/?t=ghrm" target="_blank">
+    <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/739361f1d440b17fc9e2f74e49fc185d86cbec14_badge.png" 
+         alt="This project is part of Shipwrecked, the world's first hackathon on an island!" 
+         style="width: 35%;">
+  </a>
+</div>
