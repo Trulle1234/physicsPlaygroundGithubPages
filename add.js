@@ -1,5 +1,4 @@
-import Matter from "./matter.js";
-import { objects, engine } from "./simulate.js";
+import { objects, engine, Bodies, Composite } from "./simulate.js";
 
 export function addRect(x, y, width, height, density, frictionAir, friction, frictionStatic, restitution) {
     var object = Bodies.rectangle(x, y, width, height, {
