@@ -1,4 +1,4 @@
-import Matter from "matter-js";
+import Matter from "\node_modules\matter-js\build\matter.js";
 import { addPoly, addCircle, addRect } from "add.js"
 import * as settings from "settings.js";
 import { initMenu, density, friction, frictionAir, height, restitution, width } from "menu.js";
