@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Physics</title>
+    <script type="module" crossorigin src="/physicsPlaygroundGithubPages/assets/index-L9IdQpwS.js"></script>
+    <link rel="stylesheet" crossorigin href="/physicsPlaygroundGithubPages/assets/index-DD2sKy_Z.css">
+  </head>
+  <body>
+    
+    <div class="popup close-popup" id="popup">
+      <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20fill='none'%20viewBox='0%200%2014%2014'%20id='Lock-Rotation--Streamline-Core'%20height='14'%20width='14'%3e%3cdesc%3e%20Lock%20Rotation%20Streamline%20Icon:%20https://streamlinehq.com%20%3c/desc%3e%3cg%20id='lock-rotation'%3e%3cpath%20id='Ellipse%201115'%20stroke='%23ffffff'%20stroke-linecap='hard'%20d='M13.3261%208.5c-0.6772%202.8667%20-3.2525%205%20-6.3261%205C3.41015%2013.5%200.5%2010.5899%200.5%207%200.5%203.41015%203.41015%200.5%207%200.5c2.50772%200%204.6838%201.42011%205.7678%203.5'%20stroke-width='0.5'%3e%3c/path%3e%3cpath%20id='Vector'%20stroke='%23ffffff'%20stroke-linecap='hard'%20stroke-linejoin='round'%20d='M13.5%202v2.5H11'%20stroke-width='0.5'%3e%3c/path%3e%3cpath%20id='Vector%202567'%20stroke='%23ffffff'%20stroke-linejoin='hard'%20d='M4.75%209.25v-2c0%20-0.27614%200.22386%20-0.5%200.5%20-0.5h3.5c0.27614%200%200.5%200.22386%200.5%200.5v2c0%200.27614%20-0.22386%200.5%20-0.5%200.5h-3.5c-0.27614%200%20-0.5%20-0.22386%20-0.5%20-0.5Z'%20stroke-width='0.5'%3e%3c/path%3e%3cpath%20id='Vector%202568'%20stroke='%23ffffff'%20stroke-linecap='hard'%20stroke-linejoin='round'%20d='M5.5%206.75v-1c0%20-0.82843%200.67157%20-1.5%201.5%20-1.5v0c0.82843%200%201.5%200.67157%201.5%201.5v1'%20stroke-width='0.5'%3e%3c/path%3e%3c/g%3e%3c/svg%3e">
+      <h2>Plese turn on rotation lock</h2>
+      <p>For this website to properly function on your device you need to turn on rotation lock / turn off auto rotate.</p>
+      <button type="button" onclick="closePopup()">Done!</button>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+      <ul>
+        <li>
+          <button id="btn-square" class="sidebar-btn" aria-label="Square">
+            <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2025%2025'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20x='5.5'%20y='5.5'%20width='14'%20height='14'%20stroke='%23fff'%20stroke-width='0.4'/%3e%3c/svg%3e" id="img-square" class="dragable" alt="" />
+          </button>
+        </li>
+        <li>
+          <button id="btn-circle" class="sidebar-btn" aria-label="Circle">
+            <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2025%2025'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='12.5'%20cy='12.5'%20r='8'%20stroke='%23fff'%20stroke-width='0.4'/%3e%3c/svg%3e" id="img-circle" class="dragable" alt="" />
+          </button>
+        </li>
+        <li>
+          <button id="btn-triangle" class="sidebar-btn" aria-label="Triangle">
+            <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2025%2025'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M20.5%2018.5H4.5L12.5%205.5L20.5%2018.5Z'%20stroke='%23fff'%20stroke-width='0.4'/%3e%3c/svg%3e" id="img-triangle" class="dragable" alt="" />
+          </button>
+        </li>
+      </ul>
+      
+      <br>
+      <div>
+        <div  class="slider-controls">
+          <div id="output-amount" class="slider-output">
+            Amount: 1
+          </div> 
+          <div>
+            <button id="reset-amount" title="Reset" aria-label="Reset">&#8634; </button>
+          </div>
+        </div>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100" value="1" class="slider" id="slider-amount">
+        </div>
+      </div>
+      <br>
+      <div>
+        <div class="slider-controls">
+          <div id="output-width" class="slider-output">
+            Width/Diameter: 80
+          </div>
+          <div>
+            <button id="reset-width" title="Reset" aria-label="Reset">&#8634;</button>
+          </div>
+        </div>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="600" value="80" class="slider" id="slider-width">
+        </div>
+      </div>
+      <br>
+      <div>
+        <div class="slider-controls">
+          <div id="output-height" class="slider-output">
+            Height: 80
+          </div>
+          <div>
+            <button id="reset-height" title="Reset" aria-label="Reset">&#8634;</button>
+          </div>
+        </div>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="600" value="80" class="slider" id="slider-height">
+        </div>
+      </div>
+      <br>
+      <div>
+        <div class="slider-controls">
+          <div id="output-density" class="slider-output">
+            Density: 10
+          </div>
+          <div>
+            <button id="reset-density" title="Reset" aria-label="Reset">&#8634;</button>
+          </div>
+        </div>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100" value="10" class="slider" id="slider-density">
+        </div>
+      </div>
+      <br>
+      <div>
+        <div class="slider-controls">
+          <div id="output-friction-air" class="slider-output">
+            Air Resistance: 2
+          </div>
+          <div>
+            <button id="reset-friction-air" title="Reset" aria-label="Reset">&#8634;</button>
+          </div>
+        </div>
+        <div class="slidecontainer">
+          <input type="range" min="0" max="100" value="2" class="slider" id="slider-friction-air">
+        </div>
+      </div>
+      <br>
+      <div>
+        <div class="slider-controls">
+          <div id="output-friction" class="slider-output">
+            Friction: 5
+          </div>
+          <div>
+            <button id="reset-friction" title="Reset" aria-label="Reset">&#8634;</button>
+          </div>
+        </div>
+        <div class="slidecontainer">
+          <input type="range" min="0" max="20" value="5" class="slider" id="slider-friction">
+        </div>
+      </div>
+      <br>
+      <div>
+        <div class="slider-controls">
+          <div id="output-restitution" class="slider-output">
+            Bounciness: 80
+          </div>
+          <div>
+            <button id="reset-restitution" title="Reset" aria-label="Reset">&#8634;</button>
+          </div>
+        </div>
+        <div class="slidecontainer">
+          <input type="range" min="0" max="100" value="80" class="slider" id="slider-restitution">
+        </div>
+      </div>
+      
+    </div>
+
+    <button id="toggle-btn">&#8862;</button>
+  </body>
+</html>
