@@ -1,4 +1,4 @@
-import Matter from "./matter.js";
+import Matter from 'matter-js';
 import { objects, engine } from "./simulate.js";
 
 const { Bodies, Composite } = Matter;
